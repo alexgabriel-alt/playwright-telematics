@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import LoginPage from '../pages/LoginPage';
 
 test('has title', async ({ page }) => {
   await page.goto('https://control.staging.eu.autofleet.io/login');
@@ -6,9 +7,9 @@ test('has title', async ({ page }) => {
   // Expect a title "to contain" a substring.
   //await expect(page).toHaveTitle(/autofleet/);
 
-  await page.getByRole('textbox', { name: 'E-mail' }).click();
-  await page.getByRole('textbox', { name: 'Password' }).click();
-  await page.getByRole('button', { name: 'Login' }).click();
+  const loginPage = new LoginPage(page)
+  await loginPage.loginToApplication();
+
 });
 
 test('get started link', async ({ page }) => {

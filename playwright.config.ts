@@ -34,6 +34,11 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
+    storageState: undefined,    // makes sure no cookies/session is reused
+    permissions: [],            // no permissions carried over
+    acceptDownloads: true,
+    ignoreHTTPSErrors: true,
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
 
