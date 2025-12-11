@@ -17,6 +17,6 @@ test.describe("Positive login Flow", ()=>{
     test("Login with autofleet user", async({page})=>{
 
         await loginPage.loginToApplication();
-        //await loginPage.validatePageUrl(ApplicationUrl.Production_US_Dashboard_Page_Url);
+        await loginPage.validatePageUrl(ApplicationUrl.Production_US_Dashboard_Page_Url);
     });
 })

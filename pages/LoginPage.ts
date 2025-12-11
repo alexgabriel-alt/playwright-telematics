@@ -35,7 +35,7 @@ private errorMessage: Locator;
         await this.usernameField.fill(username);
         await this.passwordField.fill(password);
         await this.loginButton.click();
-        await this.validatePageUrl(`${ApplicationUrl.Production_US_URL}/uZwB9vSeB8AAoU8nU4uBc1`);
+        //await this.validatePageUrl(`${ApplicationUrl.Production_US_URL}/uZwB9vSeB8AAoU8nU4uBc1`);
 
 
     }
