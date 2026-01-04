@@ -12,6 +12,7 @@ private passwordField: Locator;
 private loginButton: Locator;
 private errorMessage: Locator;
 
+
     //protected page: Page; //אופציונלי 
 
     constructor(protected page: Page) {
@@ -21,6 +22,8 @@ private errorMessage: Locator;
         this.passwordField = this.page.locator('[id="loginPassword"]');
         this.loginButton = this.page.locator('[id="loginSubmit"]');
         this.errorMessage= this.page.locator('[id="errorMessage"]');
+       
+
 
         
     }
@@ -39,7 +42,6 @@ private errorMessage: Locator;
 
 
     }
-
     
     public async validateLogin(username: string,password:string)
     {
